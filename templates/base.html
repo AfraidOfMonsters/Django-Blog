@@ -1,0 +1,26 @@
+{% load settings %}<!DOCTYPE html>
+<head>
+<title>{% block title %}{% setting site_name %} | a full service integrated marketing agency{% endblock %}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta property="fb:admins" content="528973626"/>
+<meta property="og:title" content="{% block og_title %}{% setting site_name %}{% endblock %}"/>
+<meta property="og:type" content="{% block og_type %}company{% endblock %}"/>
+<meta property="og:url" content="{{ absolute_url }}"/>
+<meta property="og:image" content="{% block og_image %}{% endblock %}"/>
+<meta property="og:site_name" content="{% setting site_name %}"/>
+<meta property="og:description" content="{% block og_description %}{% endblock %}"/>
+{% block css %}
+<link rel="stylesheet" href="{{MEDIA_URL}}css/screen.css" media="all" />
+{% endblock %}
+{% block scripts %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+{% endblock %}
+{% block header %}{% endblock %}
+</head>
+<body>
+{% block content %}
+{% endblock %}
+</body>
+</html>

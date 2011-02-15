@@ -1,0 +1,15 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#add-image").click(function(){
+		parent.uploaded_media_id = {{ media.pk }};
+		parent.uploaded_media_url = "{{ media.thumbnail }}";
+		parent.$.fancybox.close();
+	});
+});
+</script>
+
+<h1>Media</h1>
+<img src="{{ media.thumbnail }}" width="150" height="150" />
+<br/>
+<a href="#" id="add-image">Add this image</a>

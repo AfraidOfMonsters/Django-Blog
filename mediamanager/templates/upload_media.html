@@ -1,0 +1,7 @@
+<h1>Upload Image</h1>
+{{ form.non_field_errors }}
+<form id="uploadimage" action="{{ absolute_url }}" method="post" enctype="multipart/form-data">{% csrf_token %}
+<label for="file_img">Image File:</label>{{ form.file }} {{ form.file.errors }}
+<pre>Please entire your image file is no bigger than {{ params.file_size_limit }}MB</pre>
+<input type="submit" value="Upload" />
+</form>

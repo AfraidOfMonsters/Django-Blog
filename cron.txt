@@ -1,0 +1,1 @@
+replace media attachment delete signal with a weekly cron
